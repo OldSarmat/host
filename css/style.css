@@ -101,24 +101,6 @@ body {
 	padding-left: 25px;
 }
 
-
-/* .menu__list li:first-child {
-	margin-right: 104px;
-}
-
-.menu__list li:nth-child(5) {
-	margin-left: 165px;
-	border-right: 2px solid #DAD8D8;
-	padding-right: 30px;
-}
-
-
-.menu__list li:last-child {
-	padding-left: 25px;
-	font-size: 16px;
-	background: url(../img/phone.svg) no-repeat;
-} */
-
 a.menu__link {
 	display: inline-block;
 	position: relative;
@@ -142,9 +124,6 @@ a.menu__link:focus:after {
 	width: 75%;
 }
 
-.meun__item {}
-
-.menu__link {}
 
 .header__content {
 	padding: 76px 0 79px;
@@ -153,7 +132,7 @@ a.menu__link:focus:after {
 
 .tabs {
 	max-width: 1440px;
-	padding-left: 112px;
+	padding-left: 104px;
 }
 
 
@@ -219,7 +198,7 @@ a.menu__link:focus:after {
 }
 
 .content__tabs--title {
-	width: 608px;
+	width: 528px;
 	color: #2E2E2E;
 	font-family: Poppins;
 	font-size: 64px;
@@ -271,7 +250,8 @@ a.menu__link:focus:after {
 
 .content__tabs--img {
 	max-width: 552px;
-	margin: -21px 93px 0px 0px;
+	/* margin: -21px 93px 0px 0px; */
+	margin: -21px auto 0;
 	background: url(../img/elements-1.png) 0% 65% no-repeat, url(../img/elements-2.png) 100% 13% no-repeat, url(../img/elements-3.png) 100% 90% no-repeat;
 	background-size: 7%, 8%, 13%;
 }
@@ -315,9 +295,6 @@ input.header__input:checked+label::after {
 	width: 75%;
 }
 
-.main {}
-
-.hosting {}
 
 .hosting__box {
 	padding: 0 74px 0;
@@ -325,7 +302,6 @@ input.header__input:checked+label::after {
 	/* flex-wrap: wrap; */
 }
 
-.hosting__content {}
 
 .hosting__title {
 	width: 594px;
@@ -354,18 +330,17 @@ input.header__input:checked+label::after {
 }
 
 
-.advantage {}
-
 .advantage__box {
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
 	flex-wrap: wrap;
-	padding: 95px 55px 133px;
+	padding: 85px 45px 133px;
 }
 
 .advantage__item {
 	text-align: center;
+	margin: 10px 10px 0;
 }
 
 .advantage__title {
@@ -829,12 +804,11 @@ input:checked+.label:after {
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
-	padding: 125px 20px 0 109px;
+	padding: 125px 18px 0 109px;
+	gap: 10px;
 }
 
-.serve-images img {
-	padding-right: 3px;
-}
+
 
 .touch {
 	padding: 185px 0 199px 22px;

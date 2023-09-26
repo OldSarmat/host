@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../start-clean"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "host"
+	}
+}

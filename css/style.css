@@ -28,7 +28,14 @@ body {
 	margin-left: 0;
 }
 
+button:hover {
+	box-shadow: 0px 0px 64px 0px rgba(176, 0, 0, 0.30);
+	scale: 1.01;
+}
 
+.footer-menu__list li:hover {
+	scale: 1.01;
+}
 
 .container {
 	max-width: 1440px;
@@ -36,7 +43,6 @@ body {
 	margin: 0 auto;
 }
 
-.header {}
 
 .header__top {
 	display: flex;
@@ -81,11 +87,6 @@ body {
 	margin-right: 10px;
 }
 
-.menu__item {}
-
-.menu__link {}
-
-.menu__center {}
 
 .menu__right {
 	display: flex;
@@ -494,9 +495,7 @@ input:checked+.label:after {
 
 .price__tabs>div {
 	display: none;
-	/* border-top: 4px solid #C4C4C4; */
 	padding-top: 10px;
-	/* max-width: 856px; */
 	margin: 0 auto;
 	text-align: center;
 	position: relative;
@@ -995,3 +994,40 @@ input:checked+.label:after {
 		padding-top: 50px;
 	}
 }
+
+
+/* Добавьте стиль для анимации появления */
+.fade-in {
+    opacity: 0; /* Начальная непрозрачность */
+    transform: translateY(200px); /* Начальное положение элемента (можете настроить по своему усмотрению) */
+    transition: opacity 0.5s ease, transform 2s ease; /* Длительность анимации и тип перехода */
+}
+
+/* Когда элемент видим, уберите анимацию */
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0); /* Вернуть элемент в его нормальное положение */
+}
+
+.fade-in-r {
+    opacity: 0; /* Начальная непрозрачность */
+    transform: translateX(500px); /* Начальное положение элемента (можете настроить по своему усмотрению) */
+    transition: opacity 0.5s ease, transform 2s ease; /* Длительность анимации и тип перехода */
+}
+
+.fade-in-r.show-x {
+    opacity: 1;
+    transform: translateX(0); /* Вернуть элемент в его нормальное положение */
+}
+
+.fade-in-l {
+    opacity: 0; /* Начальная непрозрачность */
+    transform: translateX(-500px); /* Начальное положение элемента (можете настроить по своему усмотрению) */
+    transition: opacity 0.5s ease, transform 2s ease; /* Длительность анимации и тип перехода */
+}
+
+.fade-in-l.show-x {
+    opacity: 1;
+    transform: translateX(0); /* Вернуть элемент в его нормальное положение */
+}
+

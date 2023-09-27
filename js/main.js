@@ -15,3 +15,17 @@ document.addEventListener("scroll", function() {
     handleScrollAnimation(elementsFadeInR, "show-x");
     handleScrollAnimation(elementsFadeInL, "show-x");
 });
+
+window.addEventListener('load', function () {
+    // Находим прелоадер
+    const preloader = document.querySelector('.preloader');
+
+    // Добавляем класс для анимации перемещения вверх
+    preloader.classList.add('slideUp');
+
+    // Ждем завершения анимации (примерно 1 секунда)
+    setTimeout(function () {
+        // Скрываем прелоадер
+        preloader.style.display = 'none';
+    }, 3000); // Измените значение на свое усмотрение
+});

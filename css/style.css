@@ -1031,3 +1031,48 @@ input:checked+.label:after {
     transform: translateX(0); /* Вернуть элемент в его нормальное положение */
 }
 
+/* Стили для контейнера прелоадера */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: #B00000;  */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Положение над всеми элементами страницы */
+	background: url(../img/logo-white.png) 50% 50% no-repeat, #B00000;
+}
+
+/* Стили для анимации загрузки */
+.loader {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #B00000; 
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    animation: spin 2s linear infinite;
+}
+
+/* Анимация вращения */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.preloader.slideUp {
+    animation: slideUp 3s ease;
+}
+
+/* Анимация перемещения вверх */
+@keyframes slideUp {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100%); /* Перемещение прелоадера за пределы экрана вверх */
+    }
+}
+

@@ -16,6 +16,8 @@ document.addEventListener("scroll", function() {
     handleScrollAnimation(elementsFadeInL, "show-x");
 });
 
+
+
 window.addEventListener('load', function () {
     // Находим прелоадер
     const preloader = document.querySelector('.preloader');
@@ -27,5 +29,45 @@ window.addEventListener('load', function () {
     setTimeout(function () {
         // Скрываем прелоадер
         preloader.style.display = 'none';
-    }, 3000); // Измените значение на свое усмотрение
+    }, 2000); // Измените значение на свое усмотрение
+});
+
+//спойлер для меню footer
+
+$(document).ready(function() {
+    $('.footer-menu__title').click(function(event) {
+        if ($('.footer-menu').hasClass('one')) {
+            // Проверяем, не имеет ли элемент уже класс "active"
+            if (!$(this).hasClass('active')) {
+                // Удаляем класс "active" и скрываем смежные элементы у других заголовков
+                $('.footer-menu__title').removeClass('active');
+                $('.footer-menu__content').slideUp(300);
+            }
+        }
+        // Теперь переключаем класс "active" и отображаем/скрываем смежные элементы
+        $(this).toggleClass('active').nextAll().slideToggle(300);
+    });
+});
+
+
+// $(document).ready(function() {
+//     $('.footer-menu__title').click(function(event) {
+//         $(this).toggleClass('active').nextAll().slideToggle(300);
+//     });
+// });
+
+// $(document).ready(function() {
+//     $('.footer-menu__title').click(function(event) {
+//         if ($('.footer-menu').hasClass('one')) {
+//             $('.footer-menu__title').not($(this)).removeClass('active');
+//             $('.footer-menu__content').not($(this).next()).slideUp(300);
+//         }
+//         $(this).toggleClass('active').nextAll().slideToggle(300);
+//     });
+// });
+
+$(document).ready(function() {
+    $('.menu-burger__button').click(function(event) {
+        $('.menu-burger__button,.menu-burger__list').toggleClass('active');
+    });
 });
